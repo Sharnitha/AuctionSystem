@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
+COPY . .
 RUN pwd && ls
 RUN dotnet publish src/Infrastructure/AuctionSystem.Infrastructure/AuctionSystem.Infrastructure.csproj -c release -o app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS final
