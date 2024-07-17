@@ -11,4 +11,4 @@ RUN adduser --disabled-password --gecos '' non-root && \
 USER non-root
 EXPOSE 80
 COPY --from=build /src/app/publish .
-ENTRYPOINT ["dotnet", "AuctionSystem.dll"]
+ENTRYPOINT ["dotnet", "AuctionSystem.Infrastructure.dll"]
