@@ -22,6 +22,9 @@ jobs:
         dotnet-version: 3.1.426
     - name: Listing Dotnet version
       run: dotnet --version
+
+    - name: Listing files
+      run: ls 
      
     - name: Dotnet build
       run: docker build -t githubcisharni.azurecr.io/demoenv:${{ github.run_id }} .
